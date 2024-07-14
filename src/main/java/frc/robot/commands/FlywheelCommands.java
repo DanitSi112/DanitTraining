@@ -19,6 +19,15 @@ public class FlywheelCommands {
             () -> false,
             flywheel
         );
+    }
 
+    public Command getSetVelocityCommand(double velocity){
+        return new FunctionalCommand(
+            ()->{},
+            ()->flywheel.setVelocity(velocity),
+            (interrupted)-> flywheel.setVelocity(0.),
+            () -> velocity==flywheel.getVelocity(),
+            flywheel
+        );    
     }
 }
