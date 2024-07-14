@@ -25,5 +25,9 @@ public class Flywheel extends SubsystemBase{
         motor.setVoltage(voltage);
     }
 
+    public double getVelocity(){
+        return motor.getEncoder().getVelocity();
+    }
+
 
 }
