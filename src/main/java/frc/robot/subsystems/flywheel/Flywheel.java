@@ -21,6 +21,9 @@ public class Flywheel extends SubsystemBase{
         motor.getPIDController().setReference(velocity, ControlType.kVelocity);
     }
 
+    public void setVoltage(double voltage){
+        motor.setVoltage(voltage);
+    }
 
 
 }
